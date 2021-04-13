@@ -50,8 +50,11 @@ $orange:#E2831C;
                         opacity: 1;
                         display: block;
                         transition: opacity $duration;
+                        transform: scale(1);
+                        transition: scale $duration;
                         &:hover{
                             opacity: 0.6;
+                            transform: scale(1.2);
                         }
                     }
                 }
@@ -69,7 +72,8 @@ $orange:#E2831C;
                         position: absolute;
                         top:-22px;
                         left:0%;
-                        background-color: red;
+                        color: white;
+                        background-color:$blue;
                         text-align: center;
                         border-radius: 5px;
                     }
@@ -93,6 +97,31 @@ $orange:#E2831C;
                 }
                 &:hover{
                     box-shadow: 0px 0px 50px rgba(0,0,0,0.5);
+                }
+                .card_body{
+                    border-radius: 8%;
+                    text-align:center ;
+                    padding:25px;
+                    h2{
+                        text-align: center;
+                    }
+                    p,li,h3{
+                        margin: 3px;
+                    }
+                    
+                }
+                .card_footer{
+                    position: absolute;
+                    bottom: 0px;
+                    left: 20px;
+                    right: 20px;
+                    font-size: 11px;
+                    color: #A3A9AB;
+                    .icon_comment{
+                        img{
+                            cursor: pointer;
+                        }
+                    }
                 }
             } 
         }

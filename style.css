@@ -65,10 +65,16 @@
   display: block;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: scale 0.3s;
+  transition: scale 0.3s;
 }
 
 * body .grid .card .card_photo img:hover {
   opacity: 0.6;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 * body .grid .card .card_description {
@@ -88,7 +94,8 @@
   position: absolute;
   top: -22px;
   left: 0%;
-  background-color: red;
+  color: white;
+  background-color: #0456B4;
   text-align: center;
   border-radius: 5px;
 }
@@ -115,5 +122,32 @@
 * body .grid .card:hover {
   -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+
+* body .grid .card .card_body {
+  border-radius: 8%;
+  text-align: center;
+  padding: 25px;
+}
+
+* body .grid .card .card_body h2 {
+  text-align: center;
+}
+
+* body .grid .card .card_body p, * body .grid .card .card_body li, * body .grid .card .card_body h3 {
+  margin: 3px;
+}
+
+* body .grid .card .card_footer {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  right: 20px;
+  font-size: 11px;
+  color: #A3A9AB;
+}
+
+* body .grid .card .card_footer .icon_comment img {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
