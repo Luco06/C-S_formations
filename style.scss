@@ -26,6 +26,7 @@ $orange:#E2831C;
             grid-gap:10px;
             justify-content: center;
             .card{
+                overflow: hidden;
                 position: relative;
                 width: 380px;
                 border: black  solid 1px;
@@ -39,10 +40,6 @@ $orange:#E2831C;
                     height: 370px;
                     border-radius: 8px;
                     overflow: hidden;
-                    transition: height $duration;
-                    &:hover{
-                        height: 200px;
-                    }
                     img{
                         width:379px;
                         height: 370px;
@@ -98,10 +95,17 @@ $orange:#E2831C;
                 &:hover{
                     box-shadow: 0px 0px 50px rgba(0,0,0,0.5);
                 }
-                .card_body{
+                #card_body{
+                    height:0px;
+                    opacity: 0;
+                    transition: height  $duration;
                     border-radius: 8%;
                     text-align:center ;
                     padding:25px;
+                    &:hover{
+                        height: auto;
+                        opacity: 1;
+                    }
                     h2{
                         text-align: center;
                     }
