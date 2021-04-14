@@ -29,7 +29,7 @@
           justify-content: center;
 }
 
-* body .grid .card {
+* body .grid .card1, * body .grid .card2, * body .grid .card3 {
   overflow: hidden;
   position: relative;
   width: 380px;
@@ -42,9 +42,10 @@
   transition: box-shadow 0.3s;
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
   border-radius: 8px;
+  cursor: pointer;
 }
 
-* body .grid .card .card_photo {
+* body .grid .card1 .card_photo, * body .grid .card2 .card_photo, * body .grid .card3 .card_photo {
   text-align: center;
   background-color: black;
   height: 370px;
@@ -52,7 +53,7 @@
   overflow: hidden;
 }
 
-* body .grid .card .card_photo img {
+* body .grid .card1 .card_photo img, * body .grid .card2 .card_photo img, * body .grid .card3 .card_photo img {
   width: 379px;
   height: 370px;
   border-radius: 8px;
@@ -66,17 +67,17 @@
   transition: scale 0.3s;
 }
 
-* body .grid .card .card_photo img:hover {
+* body .grid .card1 .card_photo img:hover, * body .grid .card2 .card_photo img:hover, * body .grid .card3 .card_photo img:hover {
   opacity: 0.6;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-* body .grid .card .card_description {
+* body .grid .card1 .card_description, * body .grid .card2 .card_description, * body .grid .card3 .card_description {
   position: relative;
 }
 
-* body .grid .card .card_description .card_title {
+* body .grid .card1 .card_description .card_title, * body .grid .card2 .card_description .card_title, * body .grid .card3 .card_description .card_title {
   position: absolute;
   top: -200px;
   color: white;
@@ -85,7 +86,7 @@
   width: 100%;
 }
 
-* body .grid .card .card_description .card_online {
+* body .grid .card1 .card_description .card_online, * body .grid .card2 .card_description .card_online, * body .grid .card3 .card_description .card_online {
   position: absolute;
   top: -22px;
   left: 0%;
@@ -95,7 +96,7 @@
   border-radius: 5px;
 }
 
-* body .grid .card .card_description .card_public {
+* body .grid .card1 .card_description .card_public, * body .grid .card2 .card_description .card_public, * body .grid .card3 .card_description .card_public {
   position: absolute;
   top: -22px;
   right: 0%;
@@ -105,7 +106,7 @@
   border-radius: 5px;
 }
 
-* body .grid .card .card_description .card_niveau {
+* body .grid .card1 .card_description .card_niveau, * body .grid .card2 .card_description .card_niveau, * body .grid .card3 .card_description .card_niveau {
   position: absolute;
   top: -100px;
   color: white;
@@ -114,14 +115,14 @@
   width: 100%;
 }
 
-* body .grid .card:hover {
+* body .grid .card1:hover, * body .grid .card2:hover, * body .grid .card3:hover {
   -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
 }
 
-* body .grid .card #card_body1, * body .grid .card #card_body2, * body .grid .card #card_body3 {
-  height: 0px;
-  opacity: 0;
+* body .grid .card1 .card_body1, * body .grid .card1 .card_body2, * body .grid .card1 .card_body3, * body .grid .card2 .card_body1, * body .grid .card2 .card_body2, * body .grid .card2 .card_body3, * body .grid .card3 .card_body1, * body .grid .card3 .card_body2, * body .grid .card3 .card_body3 {
+  height: 0;
+  visibility: hidden;
   -webkit-transition: height 0.3s;
   transition: height 0.3s;
   border-radius: 8%;
@@ -129,15 +130,20 @@
   padding: 25px;
 }
 
-* body .grid .card #card_body1 h2, * body .grid .card #card_body2 h2, * body .grid .card #card_body3 h2 {
+* body .grid .card1 .card_body1 h2, * body .grid .card1 .card_body2 h2, * body .grid .card1 .card_body3 h2, * body .grid .card2 .card_body1 h2, * body .grid .card2 .card_body2 h2, * body .grid .card2 .card_body3 h2, * body .grid .card3 .card_body1 h2, * body .grid .card3 .card_body2 h2, * body .grid .card3 .card_body3 h2 {
   text-align: center;
 }
 
-* body .grid .card #card_body1 p, * body .grid .card #card_body1 li, * body .grid .card #card_body1 h3, * body .grid .card #card_body2 p, * body .grid .card #card_body2 li, * body .grid .card #card_body2 h3, * body .grid .card #card_body3 p, * body .grid .card #card_body3 li, * body .grid .card #card_body3 h3 {
+* body .grid .card1 .card_body1 p, * body .grid .card1 .card_body1 li, * body .grid .card1 .card_body1 h3, * body .grid .card1 .card_body2 p, * body .grid .card1 .card_body2 li, * body .grid .card1 .card_body2 h3, * body .grid .card1 .card_body3 p, * body .grid .card1 .card_body3 li, * body .grid .card1 .card_body3 h3, * body .grid .card2 .card_body1 p, * body .grid .card2 .card_body1 li, * body .grid .card2 .card_body1 h3, * body .grid .card2 .card_body2 p, * body .grid .card2 .card_body2 li, * body .grid .card2 .card_body2 h3, * body .grid .card2 .card_body3 p, * body .grid .card2 .card_body3 li, * body .grid .card2 .card_body3 h3, * body .grid .card3 .card_body1 p, * body .grid .card3 .card_body1 li, * body .grid .card3 .card_body1 h3, * body .grid .card3 .card_body2 p, * body .grid .card3 .card_body2 li, * body .grid .card3 .card_body2 h3, * body .grid .card3 .card_body3 p, * body .grid .card3 .card_body3 li, * body .grid .card3 .card_body3 h3 {
   margin: 3px;
 }
 
-* body .grid .card .card_footer {
+* body .grid .card1 .visible, * body .grid .card2 .visible, * body .grid .card3 .visible {
+  height: auto;
+  visibility: visible;
+}
+
+* body .grid .card1 .card_footer, * body .grid .card2 .card_footer, * body .grid .card3 .card_footer {
   position: absolute;
   bottom: 0px;
   left: 20px;
@@ -146,22 +152,7 @@
   color: #A3A9AB;
 }
 
-* body .grid .card .card_footer .icon_comment img {
+* body .grid .card1 .card_footer .icon_comment img, * body .grid .card2 .card_footer .icon_comment img, * body .grid .card3 .card_footer .icon_comment img {
   cursor: pointer;
-}
-
-* body .grid .card .card_footer #down1, * body .grid .card .card_footer #down2, * body .grid .card .card_footer #down3 {
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-  margin-left: 20px;
-}
-
-* body .grid .card .card_footer #up1, * body .grid .card .card_footer #up2, * body .grid .card .card_footer #up3 {
-  visibility: hidden;
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-  margin-left: -18px;
 }
 /*# sourceMappingURL=style.css.map */
